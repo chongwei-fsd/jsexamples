@@ -165,7 +165,7 @@ class Field {
         this.endGame();
     }
 
-    static promptInt(text) {
+    static fieldSize(text) {
         let num;
         while (true) {
             num = (prompt(text));
@@ -178,9 +178,9 @@ class Field {
 
 }
 
-// prompt user enter rows and cols (5-10)
-ROWS = Field.promptInt('Enter number of rows: ');
-COLS = Field.promptInt('Enter number of cols: ');
+// prompt user enter rows and cols (5-10) for field size
+ROWS = Field.fieldSize('Enter number of rows: ');
+COLS = Field.fieldSize('Enter number of cols: ');
 
 // Instantiate a new instance of Field Class
 const createField = Field.generateField(ROWS, COLS, PERCENTAGE);
